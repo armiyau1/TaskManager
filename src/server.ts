@@ -23,7 +23,7 @@ app.post("/tasks", (req: Request, res: Response) => {
   }
 });
 
-/** Get all tasks (optional filter by status) */
+/** Get all tasks */
 app.get("/tasks", (req: Request, res: Response) => {
   const { status } = req.query;
   const tasks = taskManager.listTasks(status as any);
